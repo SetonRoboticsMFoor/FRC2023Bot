@@ -49,12 +49,25 @@ public class DriveTrainSub extends SubsystemBase {
     driveTrain.arcadeDrive(rotation, speed);
   
   }
+  
 
 
   
 
   public double getPitch(){
     return navX.getPitch();
+  }
+  public double getRightEncoder(){
+    return rightDriveEncoder.getPosition();
+  }
+  public double getLeftEncoder(){
+    return leftDriveEncoder.getPosition();
+  }
+  public void setRightEncoder(double setpoint){
+    rightDriveEncoder.setPosition(setpoint);
+  }
+  public void setLeftEncoder(double setpoint){
+    leftDriveEncoder.setPosition(setpoint);
   }
 
 
@@ -64,6 +77,17 @@ public class DriveTrainSub extends SubsystemBase {
     SmartDashboard.putNumber("Gyro", navX.getAngle());
     SmartDashboard.putNumber("Right Encoder", leftDriveEncoder.getPosition());
     SmartDashboard.putNumber("Left Encoder", rightDriveEncoder.getPosition());
+    
+    SmartDashboard.putNumber("FrontRightTemp", FrontRightMotor.getMotorTemperature());
+    SmartDashboard.putNumber("FrontLeftTemp", FrontLeftMotor.getMotorTemperature());
+    SmartDashboard.putNumber("BackLeftTemp", BackLeftMotor.getMotorTemperature());
+    SmartDashboard.putNumber("BackRightTemp", BackRightMotor.getMotorTemperature());
+
+    SmartDashboard.putNumber("FrontRightAMP", FrontRightMotor.getAppliedOutput());
+    SmartDashboard.putNumber("FrontLeftAMP", FrontLeftMotor.getAppliedOutput());
+    SmartDashboard.putNumber("BackRightAMP", BackRightMotor.getAppliedOutput());
+    SmartDashboard.putNumber("BackLeftAMP", BackLeftMotor.getAppliedOutput());
+
 
 
   }

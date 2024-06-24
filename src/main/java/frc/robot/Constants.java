@@ -33,9 +33,10 @@ public final class Constants {
 
 
   //PID
-  public static double balPVal = 0.1;
-  public static double balIVal = 0;
-  public static double balDVal = 0;
+  public static double balPVal = 0.03;
+  public static double balIVal = 0.003;
+  //0.005
+  public static double balDVal = 0.005;
   public static double balSetPoint = 0;
 
 
@@ -43,13 +44,14 @@ public final class Constants {
   public static int elevatorTiltMotorChannel = 7;
   public static int elevatorLiftMotorChannel = 8;
   //el PID
-  public static double liftPVal = 0.0025;
+  public static double liftPVal = 0.02;
   public static double liftIVal = 0;
   public static double liftDVal = 0;
-  public static double liftTopSetpoint = 3.785711;
-  public static double liftBotSetpoint = 0;
+  public static double liftMidSetpoint = 5.353271;
+  public static double liftTopSetpoint = 7.35;
+  public static double liftBotSetpoint = 1;
 
-  public static double tiltPVal = 0.01;
+  public static double tiltPVal = 0.0025;
   public static double tiltIVal = 0;
   public static double tiltDVal = 0;
   public static double tiltTopSetpoint = 20;
